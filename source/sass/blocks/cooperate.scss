@@ -1,0 +1,25 @@
+.cooperate {
+  outline: 1px solid blue;
+}
+
+.cooperate__map {
+  background-image: url("../../img/bg-map-mobile@1x.png");
+  background-repeat: no-repeat;
+}
+
+.cooperate__wrap {
+  padding-top: 31px;
+  padding-bottom: 26px;
+}
+
+.cooperate__title {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.cooperate__text {
+  color: $brown;
+  font-family: "ArialMT";
+  font-size: 14px;
+  line-height: 20px;
+}

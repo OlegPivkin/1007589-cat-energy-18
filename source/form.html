@@ -3,16 +3,18 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header class="page-header">
   <a class="page-header__logo">
-    <img class="page-header__logo-image" src="https://via.placeholder.com/191x38" width="191" height="38" alt="Логотип Cat Energy">
+    <img class="page-header__logo-image" src="img/logo-mobile.svg" width="191" height="38" alt="Логотип Cat Energy">
   </a>
   <nav class="main-nav">
     <button class="main-nav__toggle" type="button">Открыть меню</button>
     <div class="main-nav__wrapper">
-      <ul class="main-nav__list site-list">
+      <ul class="main-nav__list site-list reset">
         <li class="site-list__item">
           <a class="site-list__link" href="index.html">Главная</a>
         </li>
@@ -26,15 +28,84 @@
   </nav>
 </header>
 <main>
+  <h1 class="program-selection__heading title">Подбор программы</h1>
+  <section class="questionnaire container">
+    <h2 class="visually-hidden">Анкета по подбора питания для вашего кота</h2>
+    <b class="questionnaire__info">Заполните анкету и мы подберем программу питания для вашего кота</b>
+    <form class="questionnaire__form" method="post" action="https://echo.htmlacademy.ru">
+      <fieldset class="personal-data reset">
+        <legend class="visually-hidden">Данные кота</legend>
+        <div class="block-name">
+          <label class="block-name__label description" for="name">Имя:*</label>
+          <input class="block-name__input" type="text" name="name" id="name" placeholder="Барсик">
+        </div>
+        <div class="block-weight">
+          <label class="block-weight__label description" for="weight">Вес (кг):*</label>
+          <input class="block-weight__input" type="text" name="weight" id="weight" placeholder="7">
+        </div>
+        <div class="block-age">
+          <label class="block-age__label description" for="age">Возраст (лет):</label>
+          <input class="block-age__input" type="text" name="age" id="age" placeholder="7">
+        </div>
+      </fieldset>
+      <fieldset class="checkbox-program reset">
+        <legend class="visually-hidden checkbox-program__title">Тип програмы</legend>
+        <input class="visually-hidden" type="checkbox" id="slim" name="slim" checked>
+        <label class="checkbox-program__label description" for="slim">Похудение</label>
+        <input class="visually-hidden" type="checkbox" id="mass" name="mass">
+        <label class="checkbox-program__label description" for="mass">Набор массы</label>
+        <input class="visually-hidden" type="checkbox" id="advice" name="advice">
+        <label class="checkbox-program__label description" for="advice">Не знаю (Нужен ваш совет)</label>
+      </fieldset>
+      <fieldset class="owner-data reset">
+        <legend class="owner-data__title">Контактные данные (владельца кота)</legend>
+        <div class="block-email">
+          <label class="block-email__label description" for="email">E-mail:*</label>
+          <input class="block-email__input" type="email" id="email" placeholder="kuklachev@gmail.com">
+        </div>
+        <div class="block-phone">
+          <label class="block-phone__label description" for="tel">Телефон:*</label>
+          <input class="block-phone__input" type="tel" id="tel" placeholder="8 (960) 900-60-90">
+        </div>
+      </fieldset>
+      <fieldset class="comment reset">
+        <legend class="comment__title">Комментарий</legend>
+        <textarea class="fields__textarea" name="comment" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
+      </fieldset>
+      <fieldset class="additionally reset">
+        <legend class="additionally__title">Дополнительно</legend>
+            <input class="additionally__input" type="checkbox" id="sweetener" checked>
+            <label class="additionally__label description" for="sweetener">Сахарозаменитель</label>
+            <input class="additionally__input" type="checkbox" id="drinking-water" name="drinking-water">
+            <label class="additionally__label description" for="drinking-water">Питьевая вода</label>
+            <input class="additionally__input" type="checkbox" id="milk" name="milk">
+            <label class="additionally__label description" for="milk">Молоко</label>
+            <input class="additionally__input" type="checkbox" id="vitamins" name="vitamins">
+            <label class="additionally__label description" for="vitamins">Витамины</label>
+      </fieldset>
+      <button class="send__button button" type="submit">Отправить заявку</button>
+      <span class="questionnaire__note">* — Обязательные поля</span>
+    </form>
+  </section>
+
+  <section class="cooperate">
+    <div class="cooperate__wrap">
+      <b class="cooperate__title description">приглашаем к сотрудничеству дилеров!</b>
+      <p class="cooperate__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+    </div>
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533216!2d30.320858716006118!3d59.93871648187625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1573666646465!5m2!1sru!2sru" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+    </div>
+  </section>
 
 </main>
 
 <footer class="page-footer">
   <div class="wrapper">
     <a class="page-footer__logo">
-      <img class="page-footer__logo-image" src="https://via.placeholder.com/127x23" width="191" height="38" alt="Логотип Cat Energy">
+      <img class="page-footer__logo-image" src="img/logo-footer.svg" width="191" height="38" alt="Логотип Cat Energy">
     </a>
-    <ul class="social-list">
+    <ul class="social-list reset">
       <li class="social-list__item social-list__item--vkontakte">
         <a class="social-list__link" href="#nowhere" aria-label="Наш вконтакте">Вконтакте</a>
       </li>
