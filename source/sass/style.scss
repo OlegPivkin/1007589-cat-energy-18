@@ -1,0 +1,49 @@
+@import "fonts.scss";
+@import "visually-hidden.scss";
+@import "variables.scss";
+@import "blocks/page-header";
+@import "blocks/page-footer";
+@import "blocks/advantages";
+@import "blocks/nutrition-program";
+@import "blocks/training-program";
+@import "blocks/examples";
+@import "blocks/cooperate";
+@import "blocks/catalog";
+@import "blocks/other-goods";
+@import "blocks/gift";
+@import "blocks/questionnaire";
+@import "blocks/reset";
+@import "blocks/title";
+@import "blocks/subtitle";
+@import "blocks/description";
+@import "blocks/button";
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Oswald", "ArialMT", sans-serif;
+  background-color: $white;
+}
+
+a {
+  text-decoration: none;
+  color: #111111;
+}
+
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

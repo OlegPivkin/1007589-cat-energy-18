@@ -1,0 +1,31 @@
+.catalog {
+  outline: 1px solid blue;
+}
+
+.catalog__item {
+  padding-top: 25px;
+  padding-bottom: 24px;
+}
+
+.catalog__container {
+  color: $brown;
+  font-family: "ArialMT";
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.catalog__wrapper {
+  padding-bottom: 26px;
+}
+
+.catalog__info {
+  font-family: "ArialMT";
+  font-size: 12px;
+  line-height: 16px;
+  color: $brown;
+}
+
+.catalog__button--gray {
+  background-color: $grey;
+  color: $brown;
+}
