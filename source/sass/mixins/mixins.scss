@@ -1,0 +1,73 @@
+@mixin text-parameter($size, $line-height, $color, $weight) {
+  font-size: $size;
+  line-height: $line-height;
+  color: $color;
+  font-weight: $weight;
+}
+
+//@mixin title {
+//  font: {
+//    family: Oswald;
+//    size: 60px;
+//    weight: 400;
+//  }
+//  line-height: 60px;
+//  color: #111111;
+//  margin: 0;
+//}
+//
+//@mixin title-white {
+//  font: {
+//    family: Oswald;
+//    size: 36px;
+//    weight: 400;
+//  }
+//  line-height: 36px;
+//  color: #ffffff;
+//  margin: 0;
+//}
+//
+//@mixin subtitle {
+//  font: {
+//    family: Oswald;
+//    size: 24px;
+//    weight: 400;
+//  }
+//  line-height: 37px;
+//  color: #111111;
+//  text-transform: uppercase;
+//  margin: 0;
+//}
+//
+//@mixin description {
+//  font: {
+//    family: Oswald;
+//    size: 24px;
+//    weight: 400;
+//  }
+//  font-size: 16px;
+//  line-height: 18px;
+//  font-weight: 400;
+//  text-transform: uppercase;
+//}
+
+@mixin reset {
+  border: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin container {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@mixin style-reset {
+  padding: 0;
+  margin: 0;
+}
+
+@mixin default-list {
+  @include style-reset;
+  list-style: none;
+}
