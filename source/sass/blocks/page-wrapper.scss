@@ -1,0 +1,11 @@
+.page-wrapper {
+  width: 100%;
+  max-width: $desktop-lg-width;
+  margin: 0 auto;
+}
+
+@media (min-width: $desktop-width) {
+  .page-wrapper {
+    position: relative;
+  }
+}

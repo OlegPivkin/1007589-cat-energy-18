@@ -1,49 +1,37 @@
-@import "fonts.scss";
-@import "visually-hidden.scss";
-@import "variables.scss";
-@import "blocks/page-header";
-@import "blocks/page-footer";
-@import "blocks/advantages";
-@import "blocks/nutrition-program";
-@import "blocks/training-program";
-@import "blocks/examples";
-@import "blocks/cooperate";
-@import "blocks/catalog";
-@import "blocks/other-goods";
-@import "blocks/gift";
-@import "blocks/questionnaire";
-@import "blocks/reset";
-@import "blocks/title";
-@import "blocks/subtitle";
-@import "blocks/description";
-@import "blocks/button";
+@import "vendor/normalize.scss";
+@import "global/fonts.scss";
+@import "global/variables.scss";
+@import "global/mixins.scss";
+@import "global/scafolding.scss";
 
-html {
-  box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
-body {
-  font-family: "Oswald", "ArialMT", sans-serif;
-  background-color: $white;
-}
-
-a {
-  text-decoration: none;
-  color: #111111;
-}
-
-.container {
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
+@import "blocks/page-wrapper.scss";
+@import "blocks/button.scss";
+@import "blocks/food.scss";
+@import "blocks/about-product.scss";
+@import "blocks/add-product-card.scss";
+@import "blocks/additional-products.scss";
+@import "blocks/basic-products.scss";
+@import "blocks/bottom-container.scss";
+@import "blocks/cat-data.scss";
+@import "blocks/comment.scss";
+@import "blocks/copyright.scss";
+@import "blocks/example.scss";
+@import "blocks/example-block.scss";
+@import "blocks/example-area.scss";
+@import "blocks/form.scss";
+@import "blocks/form-container.scss";
+@import "blocks/goals.scss";
+@import "blocks/last-card.scss";
+@import "blocks/location.scss";
+@import "blocks/main-nav.scss";
+@import "blocks/other.scss";
+@import "blocks/page-footer.scss";
+@import "blocks/page-header.scss";
+@import "blocks/product-card.scss";
+@import "blocks/program.scss";
+@import "blocks/share.scss";
+@import "blocks/slider.scss";
+@import "blocks/social.scss";
+@import "blocks/target.scss";
+@import "blocks/top-container.scss";
+@import "blocks/user-data.scss";
