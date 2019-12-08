@@ -1,0 +1,42 @@
+.example {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: $light-grey;
+  margin: 0 0 31px;
+  padding: 0 20px;
+}
+
+.example__title {
+  width: 100%;
+  font-size: 36px;
+  line-height: 60px;
+  font-weight: 400;
+  margin: 33px 0;
+  padding: 0;
+}
+
+.example__text {
+  width: 100%;
+  @include arial;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  color: $light-black;
+  margin: 0 0 27px;
+  padding: 0 10px 0 0;
+}
+
+.example__block {
+  width: 100%;
+  margin: 0 0 38px;
+  padding: 0;
+}
+
+.example__cost {
+
+}
+
+.example__slider {
+
+}

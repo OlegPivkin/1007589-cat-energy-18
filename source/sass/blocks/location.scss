@@ -1,0 +1,40 @@
+.location {
+  display: flex;
+  flex-direction: column;
+}
+
+.location__text {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 0 26px;
+  padding: 0 16px;
+}
+
+.location__collaboration {
+  width: 133px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: $black;
+  text-transform: uppercase;
+  margin: 0 19px 0 0;
+  padding: 0;
+}
+
+.location__address {
+  width: 141px;
+  @include arial;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  color: $light-black;
+  margin: 0;
+  padding: 0;
+}
+
+.location__map {
+  width: 100%;
+  min-height: 400px;
+  background-image: url("../../img/bg-map-mobile@1x.png");
+  background-repeat: no-repeat;
+}

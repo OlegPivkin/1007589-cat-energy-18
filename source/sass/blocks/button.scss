@@ -1,7 +1,26 @@
 .button {
+  display: block;
+  width: 280px;
+  min-height: 40px;
+  text-align: center;
+  word-break: break-all;
+  border: none;
+  background-color: $leaf;
   font-size: 16px;
   line-height: 20px;
-  color: $white;
-  background-color: $green;
+  font-weight: 400;
   text-transform: uppercase;
+  color: $white;
+  padding: 11px 5px 14px 5px;
+  transition: color $transition;
+
+  &--grey {
+    background-color: $light-grey;
+    color: $light-black;
+  }
+
+  &--food {
+    font-size: 14px;
+    line-height: 18px;
+  }
 }

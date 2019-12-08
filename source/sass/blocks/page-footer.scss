@@ -1,5 +1,43 @@
 .page-footer {
-  padding-top: 39px;
-  padding-bottom: 31px;
-  outline: 1px solid blue;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.page-footer__location {
+  width: 100%;
+  min-height: 514px;
+  margin: 0;
+  padding: 0;
+}
+
+.page-footer__bottom-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+  padding: 0 20px;
+}
+
+.page-footer__logo {
+  width: 280px;
+  min-height: 65px;
+  border-bottom: $light-grey 1px solid;
+  margin: 0;
+  padding: 39px 76px 31px;
+}
+
+.page-footer__social {
+  width: 100%;
+  min-height: 65px;
+  border-bottom: $light-grey 1px solid;
+  margin: 0;
+  padding: 22px 5px 21px;
+}
+
+.page-footer__copyright {
+  width: 100%;
+  min-height: 65px;
+  margin: 0;
+  padding: 22px 0;
 }

@@ -1,0 +1,17 @@
+@mixin oswald {
+  font-family: "Oswald", "Arial", sans-serif;
+}
+
+@mixin arial {
+  font-family: "Arial", sans-serif;
+}
+
+@mixin style-reset {
+  padding: 0;
+  margin: 0;
+}
+
+@mixin default-list {
+  @include style-reset;
+  list-style: none;
+}

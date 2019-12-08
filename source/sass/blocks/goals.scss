@@ -1,0 +1,133 @@
+.goals {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 0 32px;
+  padding: 0 20px;
+}
+
+.goals__list {
+  @include default-list;
+  display: flex;
+  flex-direction: column;
+}
+
+.goals__item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 266px;
+  background-color: $light-grey;
+  margin: 0 0 20px;
+  padding: 0 20px;
+}
+
+.goals__item:last-child {
+  margin: 0;
+}
+
+.goals__title {
+  position: relative;
+  width: 100%;
+  min-height: 51px;
+  font-size: 24px;
+  line-height: 37px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 24px 0;
+  padding: 8px 5px 6px 92px;
+  
+  &::before {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 50px;
+    height: 51px;
+    top: 50%;
+    left: 10px;
+    border-radius: 50%;
+    background-color: $leaf;
+    transform: translateY(-50%); 
+  }
+  
+  &::after {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 92px;
+    height: 60px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--slim::after {
+    background-image: url("../../img/icon-cat-slim.svg");
+  }
+
+  &--pro::after {
+    background-image: url("../../img/icon-cat-pro.svg");
+  }
+}
+
+//.goals__title::before {
+//  position: absolute;
+//  top: 0;
+//  left: 0;
+//  content: "";
+//  width: 50px;
+//  height: 51px;
+//  border-radius: 50%;
+//  background-color: $leaf;
+//}
+//
+//.goals__title--slim::after {
+//  position: absolute;
+//  top: -2px;
+//  left: 9px;
+//  content: url("../../img/icon-cat-slim.svg");
+//}
+//
+//.goals__title--pro::after {
+//  position: absolute;
+//  top: 12px;
+//  left: -8px;
+//  content: url("../../img/icon-cat-pro.svg");
+//}
+
+.goals__text {
+  width: 100%;
+  @include arial;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  color: $light-black;
+  margin: 0 0 23px 0;
+  padding: 0;
+}
+
+.goals__link {
+  position: relative;
+  width: 100%;
+  height: 57px;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  border-top: #d9d9d9 1px solid;
+  margin: auto 0 0 0;
+  padding: 20px 0 22px;
+}
+
+.goals__link::after {
+  position: absolute;
+  top: 21px;
+  left: 97px;
+  content: "";
+  width: 25px;
+  height: 12px;
+  background-image: url("../../img/icon-right-arrow-long.svg");
+  background-repeat: no-repeat;
+}
