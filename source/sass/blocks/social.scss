@@ -1,8 +1,9 @@
 .social {
+  @include default-list;
+
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  @include default-list;
   margin: 0;
   padding: 21px 5px;
 }
@@ -20,5 +21,5 @@
 
 .social__link path,
 .social__link circle {
-  fill: $brownish-grey;
+  fill: $index-svg-fill;
 }

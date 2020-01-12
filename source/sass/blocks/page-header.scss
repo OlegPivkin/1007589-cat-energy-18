@@ -1,23 +1,5 @@
 .page-header {
+  @include style-reset;
+
   width: 100%;
-  min-height: 65px;
-  margin: 0;
-  padding: 11px 20px 15px;
-}
-
-.page-footer__logo {
-
-}
-
-.page-header__burger {
-  width: 25px;
-  height: 19px;
-  background: transparent;
-  border: none;
-  margin: 0;
-  padding: 0;
-}
-
-.page-header__main-nav {
-  display: none;
 }

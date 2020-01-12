@@ -1,0 +1,25 @@
+.top-container {
+  @include style-reset;
+
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+@media (min-width: $desktop-width) {
+  .top-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 91px;
+    padding-left: $padding-tablet;
+    padding-right: $padding-tablet;
+  }
+}
+
+@media (min-width: $desktop-lg-width) {
+  .top-container {
+    padding-left: $padding-desktop;
+    padding-right: $padding-desktop;
+  }
+}

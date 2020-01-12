@@ -1,19 +1,88 @@
 .slider {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
 
+.slider__img-container {
+  width: 100%;
 }
 
 .slider__img {
+  //display: none;
+  margin: 0 0 35px;
+  padding: 0;
 
+  &--before {
+    display: block;
+  }
+
+  &--after {
+    display: none;
+  }
 }
 
-.slider__toggle-area{
+.slide-before .slider__img--before {
+  display: block;
+}
 
+.slide-after .slider__img--after {
+  display: block;
+}
+
+.slider__toggle-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 38px;
+  padding: 0;
 }
 
 .slider__text {
+  @include oswald;
 
+  border: none;
+  background-color: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $black;
 }
 
 .slider__toggle {
+  position: relative;
+  width: 84px;
+  height: 14px;
+  border: 1px $grey-border-index solid;
+  border-radius: 6px;
+  background-color: $white;
+  cursor: pointer;
 
+  &::before {
+    //display: none;
+    position: absolute;
+    content: "";
+    width: 35px;
+    height: 6px;
+    border-radius: 3px;
+    background-color: $leaf;
+    top: 50%;
+    left: 6px;
+    transform: translateY(-50%);
+  }
+}
+
+.slide-before .slider__toggle::before {
+  display: block;
+  left: 6px;
+  right: auto;
+}
+
+.slide-after .slider__toggle::before {
+  display: block;
+  left: auto;
+  right: 6px;
 }
