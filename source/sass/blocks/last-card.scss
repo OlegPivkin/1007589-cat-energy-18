@@ -1,3 +1,86 @@
 .last-card {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.last-card__title {
+  @include oswald;
+
+  position: relative;
   width: 100%;
+  font-size: 16px;
+  line-height: 20px;
+  color: $black;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0 0 7px;
+  padding: 80px 0 0;
+
+  &::before {
+    position: absolute;
+    content: " ";
+    width: 31px;
+    height: 31px;
+    background-image: url("../../img/icon-plus-mobile.svg");
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.last-card__text {
+  width: 100%;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  color: $light-black;
+  text-align: center;
+  margin: 0 0 21px;
+  padding: 0;
+}
+
+.last-card__button {
+  width: 100%;
+}
+
+@media (min-width: $tablet-width) {
+  .last-card {
+    justify-content: flex-start;
+    align-items: center;
+    width: 324px;
+    min-height: 431px;
+    border: 1px $grey-lines solid;
+    padding: 0 37px 40px 38px;
+  }
+
+  .last-card__title {
+    width: 140px;
+    font-size: 20px;
+    margin-bottom: 28px;
+    padding-top: 166px;
+
+    &::before {
+      width: 61px;
+      height: 61px;
+      background-image: url("../../img/icon-plus.svg");
+      top: 55px;
+    }
+  }
+
+  .last-card__text {
+    width: 170px;
+    font-size: 16px;
+    margin-bottom: 78px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .last-card {
+    width: 245px;
+    padding-left: 38px;
+  }
 }

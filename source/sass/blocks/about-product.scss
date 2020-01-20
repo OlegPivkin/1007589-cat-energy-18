@@ -1,6 +1,6 @@
 .about-product {
   width: 100%;
-  margin: 0 0 42px;
+  margin: 0 0 20px;
   padding: 0 $padding-mobile;
 }
 
@@ -10,19 +10,17 @@
   width: 100%;
   font-size: 36px;
   line-height: 60px;
-  font-weight: 400;
   color: $black-2;
-  margin: 0 0 35px;
+  margin: 0 0 30px;
   padding: 0;
 }
 
 .about-product__list {
   @include default-list;
-  @include style-reset;
 
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+
   width: 100%;
 }
 
@@ -37,7 +35,7 @@
     position: absolute;
     display: block;
     content: "";
-    top: 0;
+    top: -3px;
     left: 0;
     width: 60px;
     height: 60px;
@@ -75,14 +73,13 @@
 
 @media (min-width: $tablet-width) {
   .about-product {
-    padding-left: $padding-tablet;
-    padding-right: $padding-tablet;
-    margin-bottom: 30px;
+    margin-bottom: 0;
+    padding: 45px $padding-tablet 0;
   }
 
   .about-product__title {
     font-size: 60px;
-    margin-bottom: 63px;
+    margin-bottom: 75px;
   }
 
   .about-product__list {
@@ -93,10 +90,14 @@
   .about-product__item {
     @include style-reset;
 
-    width: 245px;
-    min-height: 315px;
-    margin: 0 88px 87px 0;
-    padding: 117px 0 0;
+    width: 38.5%;
+    min-height: 229px;
+    margin: 0 111px 88px 0;
+    padding: 109px 0 0;
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
 
     &::before {
       width: 80px;
@@ -108,13 +109,12 @@
 
       position: absolute;
       z-index: -1;
-      top: 0;
-      right: -92px;
+      top: -42px;
+      left: 117px;
       width: 230px;
       height: 71px;
       font-size: 281px;
       line-height: 281px;
-      font-weight: 400;
       color: $light-grey;
     }
 
@@ -136,6 +136,7 @@
   }
 
   .about-product__text {
+    width: 245px;
     font-size: 16px;
     line-height: 24px;
   }
@@ -143,11 +144,17 @@
 
 @media (min-width: $desktop-width) {
   .about-product {
-    margin-bottom: 130px;
+    padding-top: 73px;
   }
 
   .about-product__item {
-    margin-right: 0;
+    width: 245px;
+    margin-right: 80px;
+    margin-bottom: 30px;
+
+    &:nth-child(2) {
+      margin-right: 80px;
+    }
   }
 }
 

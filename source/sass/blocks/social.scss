@@ -2,24 +2,82 @@
   @include default-list;
 
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-  margin: 0;
-  padding: 21px 5px;
 }
 
 .social__item {
-  width: 22px;
-  height: 19px;
   margin: 0 36px 0 0;
-  padding: 0;
+
+  &:last-child {
+    margin: 0;
+  }
+
+  &--vk {
+    padding: 2px 0 0;
+  }
+
+  &--insta {
+    padding: 2px 0 0;
+  }
+
+  &--fb {
+    padding: 0 0 0 3px;
+  }
 }
 
-.social__item:last-child {
-  margin: 0;
+.social__link {
+  outline: none;
+  cursor: pointer;
+  transition: opacity $transition;
 }
 
 .social__link path,
 .social__link circle {
+  transition: fill $transition;
   fill: $index-svg-fill;
+}
+
+@media (min-width: $tablet-width) {
+  .social__item {
+    margin-right: 27px;
+
+    &--vk {
+      padding-top: 5px;
+    }
+
+    &--insta {
+      padding-top: 3px;
+    }
+  }
+
+  .social__item--vk svg {
+    width: 30px;
+    height: 16px;
+  }
+
+  .social__item--insta svg {
+    width: 23px;
+    height: 23px;
+  }
+
+
+  .social__item--fb svg {
+    width: 14px;
+    height: 28px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .social__link:hover path,
+  .social__link:hover circle,
+  .social__link:focus path,
+  .social__link:focus circle {
+    fill: $leaf;
+  }
+
+  .social__link {
+    &:active {
+      opacity: 0.3;
+    }
+  }
 }

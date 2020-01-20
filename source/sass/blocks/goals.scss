@@ -1,11 +1,12 @@
 .goals {
   width: 100%;
-  margin: 0 0 32px;
-  padding: 0 20px;
+  margin: 0 0 16px;
+  padding: 0 $padding-mobile;
 }
 
 .goals__list {
   @include default-list;
+
   display: flex;
   flex-direction: column;
 }
@@ -16,8 +17,8 @@
   width: 100%;
   min-height: 266px;
   background-color: $light-grey;
-  margin: 0 0 20px;
-  padding: 0 20px;
+  margin: 0 0 $padding-mobile;
+  padding: 21px $padding-mobile 0;
 
   &:last-child {
     margin: 0;
@@ -32,11 +33,10 @@
   min-height: 51px;
   font-size: 24px;
   line-height: 37px;
-  font-weight: 400;
   color: $black-2;
   text-transform: uppercase;
-  margin: 24px 0;
-  padding: 8px 5px 6px 90px;
+  margin: 0 0 24px;
+  padding: 8px 5px 6px 71px;
 
   &::before {
     position: absolute;
@@ -44,8 +44,8 @@
     content: "";
     width: 50px;
     height: 51px;
-    top: 0;
-    left: 0;
+    top: 2px;
+    left: 2px;
     border-radius: 50%;
     background-color: $leaf;
   }
@@ -70,8 +70,8 @@
     width: 67px;
     height: 28px;
     background-image: url("../../img/icon-cat-pro.svg");
-    top: 12px;
-    left: -8px;
+    top: 13px;
+    left: -7px;
   }
 }
 
@@ -82,7 +82,7 @@
   line-height: 18px;
   font-weight: 400;
   color: $light-black;
-  margin: 0 0 23px 0;
+  margin: 0 0 21px 0;
   padding: 0;
 }
 
@@ -94,12 +94,14 @@
   height: 57px;
   font-size: 16px;
   line-height: 16px;
-  font-weight: 400;
   color: $black-2;
   text-transform: uppercase;
   border-top: #d9d9d9 1px solid;
-  margin: auto 0 0 0;
-  padding: 20px 0 22px;
+  outline: none;
+  transition: opacity $transition;
+  cursor: pointer;
+  margin: 0;
+  padding: $padding-mobile 0 22px;
 
   &::after {
     position: absolute;
@@ -110,55 +112,66 @@
     height: 12px;
     background-image: url("../../img/icon-right-arrow-long.svg");
     background-repeat: no-repeat;
+    background-position: center;
   }
 }
 
 @media (min-width: $tablet-width) {
   .goals {
-    padding-left: $padding-tablet;
-    padding-right: $padding-tablet;
+    margin-bottom: 0;
+    padding: 0 $padding-tablet 0;
   }
 
   .goals__item {
-    padding: 81px 52px 40px;
+    margin-bottom: 31px;
+    padding: 75px 52px 45px;
   }
 
   .goals__title {
     font-size: 36px;
     line-height: 37px;
-    margin: 0 0 31px;
-    padding: 0 3px;
+    margin: 0 0 11px;
+    padding: 0;
 
     &::before {
       width: 200px;
       height: 200px;
+      top: 16px;
       left: auto;
-      right: 15px;
+      right: 10px;
     }
 
     &--slim::after {
       width: 141px;
       height: 194px;
-      top: -9px;
+      top: 4px;
       left: auto;
-      right: 43px;
+      right: 40px;
     }
 
     &--pro::after {
       width: 268px;
       height: 113px;
-      top: 44px;
+      top: 57px;
       left: auto;
-      right: -16px;
+      right: -24px;
     }
+  }
+
+  .goals__title--slim + .goals__text {
+    padding-right: 232px;
+  }
+
+  .goals__title--pro + .goals__text {
+    padding-right: 260px;
   }
 
   .goals__text {
     min-height: 87px;
     font-size: 16px;
     line-height: 24px;
-    padding-right: 263px;
-    margin-bottom: 42px;
+    padding-right: 232px;
+    margin-bottom: 36px;
   }
 
   .goals__link {
@@ -175,7 +188,7 @@
 
 @media (min-width: $desktop-width) {
   .goals {
-    margin-top: -530px;
+    margin-top: -450px;
   }
 
   .goals__list {
@@ -185,21 +198,22 @@
   }
 
   .goals__item {
-    width: 47%;
+    width: 46.7%;
     min-height: 372px;
     margin-bottom: 0;
-    padding: 47px 52px 40px;
+    padding: 42px 52px 40px;
   }
 
   .goals__title {
     font-size: 36px;
     line-height: 37px;
-    margin: 0 0 31px;
-    padding: 34px 3px 30px 164px;
+    margin: 0 0 44px;
+    padding: 34px 3px 30px 162px;
 
     &::before {
       width: 100px;
       height: 100px;
+      top: 5px;
       left: 0;
       right: auto;
     }
@@ -207,24 +221,43 @@
     &--slim::after {
       width: 71px;
       height: 97px;
-      top: -6px;
-      left: 15px;
+      top: -1px;
+      left: 13px;
       right: auto;
     }
 
     &--pro::after {
       width: 134px;
       height: 57px;
-      top: 25px;
-      left: -16px;
+      top: 26px;
+      left: -18px;
       right: auto;
     }
   }
 
   .goals__text {
     min-height: 64px;
+    margin-bottom: 11px;
+  }
+
+  .goals__title--slim + .goals__text {
     padding-right: 0;
-    margin-bottom: 16px;
+  }
+
+  .goals__title--pro + .goals__text {
+    padding-right: 0;
+  }
+
+  .goals__link {
+    &:hover::after,
+    &:focus::after {
+      background-image: url("../../img/icon-right-arrow-verylong.svg");
+      width: 34px;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
   }
 }
 

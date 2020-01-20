@@ -3,8 +3,19 @@
   flex-direction: column;
   width: 100%;
   background-color: $light-grey;
-  margin: 0 0 31px;
-  padding: 0 20px;
+  margin: 0;
+  padding: 17px 0 36px;
+}
+
+.example__info {
+  @include style-reset;
+
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0 $padding-mobile 34px;
 }
 
 .example__title {
@@ -15,7 +26,7 @@
   line-height: 60px;
   font-weight: 400;
   color: $black;
-  margin: 33px 0;
+  margin: 0 0 23px;
   padding: 0;
 }
 
@@ -25,7 +36,7 @@
   line-height: 18px;
   font-weight: 400;
   color: $light-black;
-  margin: 0 0 27px;
+  margin: 0 0 25px;
   padding: 0 10px 0 0;
 }
 
@@ -33,27 +44,25 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 100%;
-  margin: 0 0 38px;
+  width: 280px;
   padding: 0;
 }
 
 .example__area {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  position: relative;
   width: 124px;
-  margin: 0;
+  min-height: 56px;
+  border: $grey-border-index 1px solid;
+  border-radius: 5px;
+  margin-bottom: 34px;
 }
 
 .example__result {
   @include oswald;
 
-  width: 124px;
-  height: 56px;
+  display: block;
+  width: 100%;
   text-align: center;
-  border: $grey-border-index 1px solid;
-  border-radius: 5px;
   font-size: 24px;
   line-height: 24px;
   font-weight: 400;
@@ -64,23 +73,28 @@
 }
 
 .example__indicator {
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: -16px;
   width: 82px;
+  transform: translateX(-50%);
   text-align: center;
   font-size: 12px;
   line-height: 12px;
   font-weight: 400;
   color: $light-black;
   background-color: $light-grey;
-  margin: -8px 0 0;
+  margin: 0;
   padding: 0;
 }
 
 .example__cost-container {
+  @include style-reset;
+
   display: flex;
   justify-content: center;
   width: 100%;
-  margin: 0 0 44px;
-  padding: 0;
 }
 
 .example__cost {
@@ -108,4 +122,152 @@
 
 .example__slider {
   width: 100%;
+}
+
+@media (min-width: $tablet-width) {
+  .example {
+    background-color: transparent;
+    border-top: 1px $grey-lines solid;
+    margin-top: -34px;
+    margin-bottom: 0;
+    padding: 43px 0 0 0;
+  }
+
+  .example__info {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 $padding-tablet 52px;
+  }
+
+  .example__title {
+    font-size: 60px;
+    margin-bottom: 64px;
+  }
+
+  .example__text {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 53px;
+    padding-right: 32px;
+  }
+
+  .example__block {
+    width: 366px;
+    margin: 0;
+  }
+
+  .example__area {
+    width: 162px;
+    height: 72px;
+  }
+
+  .example__result {
+    font-size: 30px;
+    line-height: 37px;
+    padding: 14px 23px 24px;
+  }
+
+  .example__indicator {
+    width: max-content;
+    background-color: $white;
+    font-size: 14px;
+    line-height: 14px;
+    bottom: -9px;
+    padding: 3px 9px 3px 8px;
+  }
+
+  .example__cost-container {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    width: 184px;
+    padding-top: 11px;
+  }
+
+  .example__cost {
+    font-size: 20px;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .example__cost-number {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .example {
+    position: relative;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-top: none;
+    margin-top: -70px;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-left: $padding-tablet;
+
+    &::after {
+      position: absolute;
+      content: "";
+      z-index: -1;
+      width: 100%;
+      height: 462px;
+      background-color: $light-grey;
+      left: 0;
+      bottom: 0;
+    }
+  }
+
+  .example__info {
+    @include style-reset;
+
+    width: 439px;
+    z-index: 2;
+    padding-top: 118px;
+    padding-bottom: 73px;
+  }
+
+  .example__title {
+    margin-bottom: 146px;
+  }
+
+  .example__text {
+    margin-bottom: 68px;
+    padding-right: 0;
+  }
+
+  .example__block {
+    margin-bottom: 15px;
+  }
+
+  .example__indicator {
+    background-color: $light-grey;
+  }
+
+  .example__cost-container {
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .example__cost {
+    margin-right: 64px;
+    margin-bottom: 0;
+  }
+
+  .example__cost-number {
+    font-size: 20px;
+  }
+
+  .example__slider {
+    width: 790px;
+  }
+}
+
+@media (min-width: $desktop-lg-width) {
+  .example {
+    padding-left: $padding-desktop;
+  }
 }

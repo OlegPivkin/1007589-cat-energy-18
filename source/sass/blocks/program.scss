@@ -1,7 +1,7 @@
 .program {
   position: relative;
   width: 100%;
-  padding: 30px $padding-mobile 0;
+  padding: 27px $padding-mobile 0;
   margin: 0 0 22px;
 
   &::before {
@@ -13,7 +13,7 @@
     top: 0;
     left: 0;
     right: 0;
-    background-image: url("../img/index-background-mobile@1x.jpg");
+    background-image: url("../../img/index-background-mobile@1x.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -36,10 +36,9 @@
   width: 280px;
   font-size: 36px;
   line-height: 36px;
-  font-weight: 400;
   color: $white;
   text-align: center;
-  margin-bottom: 28px;
+  margin-bottom: 25px;
 }
 
 .program__text {
@@ -50,14 +49,10 @@
   width: 280px;
   font-size: 14px;
   line-height: 14px;
-  font-weight: 400;
+  text-transform: uppercase;
   color: $white;
   text-align: center;
-  margin-bottom: 30px;
-}
-
-.program img {
-  margin-bottom: 9px;
+  margin-bottom: 28px;
 }
 
 .program__button {
@@ -66,11 +61,8 @@
 
 @media (min-width: $tablet-width) {
   .program {
-    padding-top: 45px;
-    padding-left: $padding-tablet;
-    padding-right: $padding-tablet;
-    padding-bottom: 530px;
     margin-bottom: 0;
+    padding: 57px $padding-tablet 530px;
 
     &::before {
       display: none;
@@ -78,47 +70,54 @@
   }
 
   .program__wrapper {
+    align-items: flex-start;
     width: 516px;
-    padding-left: 90px;
+    padding-left: 86px;
     margin-right: auto;
   }
 
   .program__title {
+    width: 450px;
     font-size: 60px;
     line-height: 60px;
     color: #111111;
     text-align: left;
-    margin-bottom: 43px;
+    margin-bottom: 41px;
   }
 
   .program__text {
+    width: 300px;
     font-size: 20px;
     line-height: 20px;
     color: #111111;
     text-align: left;
-    margin-bottom: 45px;
+    margin-bottom: 48px;
   }
 
   .program img {
     position: absolute;
     bottom: 0;
-    right: 40px;
+    right: 30px;
     width: 709px;
     height: 609px;
     z-index: -1;
   }
 
   .program__button {
-    width: 248px;
+    width: 245px;
+    min-height: 52px;
+    font-size: 20px;
+    margin-left: 3px;
+    padding: 16px 10px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .program {
     position: static;
-    padding-top: 100px;
-    padding-bottom: 450px;
     margin-bottom: 80px;
+    padding-top: 107px;
+    padding-bottom: 450px;
 
     &::before {
       display: block;
@@ -127,7 +126,7 @@
       top: 0;
       left: auto;
       right: 0;
-      background-image: url("../img/index-background-desktop@1x.jpg");
+      background-image: url("../../img/index-background-desktop@1x.jpg");
     }
   }
 
@@ -135,14 +134,27 @@
     position: relative;
     width: 78%;
     align-items: flex-start;
-    padding-bottom: 198px;
+    padding-left: 79px;
+    padding-bottom: 188px;
+  }
+
+  .program__title {
+    margin-bottom: 42px;
+  }
+
+  .program__text {
+    margin-bottom: 53px;
   }
 
   .program img {
-    right: 0;
+    right: -50px;
     width: 552px;
     height: 499px;
-    margin-bottom: 62px;
+    margin-bottom: 55px;
+  }
+
+  .program__button {
+    margin-left: 1px;
   }
 }
 

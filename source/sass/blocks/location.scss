@@ -1,153 +1,111 @@
-.main-nav {
-  @include style-reset;
-  width: 100%;
-  min-height: 65px;
-  border-bottom: 1px $grey-lines solid;
-}
-
-.main-nav__top {
-  width: 100%;
+.location {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 0;
-  padding: 11px $padding-mobile 15px;
-}
-
-.main-nav__burger {
-  @include style-reset;
-
-  position: relative;
-  width: 25px;
-  height: 19px;
-  background: transparent;
-  border: none;
-
-  &::before {
-    position: absolute;
-    content: "";
-    background-image: url("../../img/icon-mobile-menu.svg");
-    background-repeat: no-repeat;
-  }
-}
-
-.main-nav--nojs .main-nav__burger::before {
-  background-image: url("../img/icon-close.svg");
-}
-
-.main-nav__list {
-  @include default-list;
-
-  display: none;
   flex-direction: column;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 100%;
 }
 
-.main-nav--nojs .main-nav__list {
+.location__text {
   display: flex;
-}
-
-.main-nav--opened .main-nav__list {
-  display: flex;
-}
-
-.main-nav__item {
-  width: 100%;
-  border-top: 1px $grey-lines solid;
-  text-align: center;
+  background-color: $light-grey;
   margin: 0;
-  padding: 24px $padding-mobile;
+  padding: 27px $padding-mobile 26px;
 }
 
-.main-nav__link {
+.location__collaboration {
   @include oswald;
+  @include style-reset;
 
-  display: block;
-  width: 100%;
-  font-size: 20px;
+  width: 136px;
+  font-size: 16px;
+  line-height: 20px;
+  color: $black;
+  text-transform: uppercase;
+  margin-right: 6px;
+}
+
+.location__address {
+  @include style-reset;
+
+  width: 141px;
+  font-size: 14px;
   line-height: 20px;
   font-weight: 400;
-  text-transform: uppercase;
-  color: $black;
+  color: $light-black;
+}
+
+.location__address p {
+  @include style-reset;
+}
+
+.location__map {
+  width: 100%;
+  height: 366px;
+  background-image: url("../../img/bg-map-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 @media (min-width: $tablet-width) {
-  .main-nav {
-    display: flex;
-    align-items: center;
+  .location__text {
     justify-content: space-between;
-    min-height: 59px;
-    border-bottom: none;
-    padding: 24px $padding-tablet 0;
+    background-color: $white;
+    padding: 66px 71px 58px;
   }
 
-  .main-nav__top {
-    width: 174px;
-  }
-
-  .main-nav__logo img {
-    width: 174px;
-    height: 59px;
-  }
-
-  .main-nav__burger {
-    display: none;
-  }
-
-  .main-nav__list {
-    display: flex;
-    flex-direction: row;
-    width: 464px;
-    padding: 0;
-  }
-
-  .main-nav__item {
-    @include style-reset;
-
-    width: auto;
-    border-top: none;
-    margin-right: 36px;
-
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-
-  .main-nav__link {
-    font-size: 18px;
+  .location__collaboration {
+    width: 164px;
+    font-size: 20px;
     line-height: 25px;
-    color: $black-2;
+  }
+
+  .location__address {
+    width: 155px;
+    text-align: right;
+    font-size: 16px;
+    margin-top: -3px;
+  }
+
+  .location__address p {
+    margin-bottom: 20px;
+  }
+
+  .location__map {
+    height: 396px;
+    background-image: url("../../img/bg-map-tablet@1x.png");
   }
 }
 
 @media (min-width: $desktop-width) {
-  .main-nav {
-    padding-top: 53px;
+  .location {
+    position: relative;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 95px 110px 103px;
   }
 
-  .main-nav__logo img {
-    width: 203px;
-    height: 60px;
+  .location__text {
+    position: relative;
+    width: 570px;
+    min-height: 201px;
+    background-color: $white;
+    padding: 66px 90px 59px 76px;
+    margin: 0;
+    flex-shrink: 0;
+    z-index: 1;
   }
 
-  .main-nav__list {
-    width: 507px;
+  .location__address {
+    text-align: left;
   }
 
-  .main-nav__link {
-    font-size: 20px;
-
-    &--index {
-      color: $white;
-    }
-  }
-}
-
-@media (min-width: $desktop-lg-width) {
-  .main-nav {
-    padding-right: $padding-desktop;
-    padding-left: $padding-desktop;
+  .location__map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    background-image: url("../../img/bg-map-desktop@1x.png");
+    z-index: 0;
   }
 }
