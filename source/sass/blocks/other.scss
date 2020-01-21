@@ -1,0 +1,134 @@
+.other {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-top: 3px $leaf solid;
+  margin: 0 0 42px;
+  padding: 0 $padding-mobile 0;
+}
+
+.other__title {
+  width: 184px;
+  margin-bottom: 39px;
+}
+
+.other__container {
+  @include style-reset;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.other__input-area {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 0 0 27px;
+  padding: 0;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.other__input {
+  @include visually-hidden;
+
+  &:checked + .other__label::before {
+    background-image: url("../../img/icon-tick.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.other__label {
+  @include oswald;
+
+  position: relative;
+  width: 100%;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $black-2;
+  margin: 0;
+  padding: 0 0 0 46px;
+
+  &::before {
+    display: block;
+    position: absolute;
+    content: "";
+    width: 30px;
+    height: 30px;
+    border: 1px $grey-toggles solid;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .other {
+    margin-bottom: 11px;
+    padding-left: 70px;
+    padding-right: 67px;
+  }
+
+  .other__title {
+    width: 313px;
+    margin-bottom: 64px;
+  }
+
+  .other__container {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .other__input-area {
+    width: 50%;
+    margin-bottom: 54px;
+    padding-right: 19px;
+
+    &:last-of-type {
+      margin-bottom: 54px;
+    }
+  }
+
+  .other__label {
+    font-size: 20px;
+    line-height: 20px;
+    padding-left: 59px;
+
+    &::before {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .other {
+    margin-bottom: 72px;
+  }
+
+  .other__title {
+    margin-bottom: 64px;
+  }
+
+  .other__input-area {
+    width: 25%;
+    margin-bottom: 0;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (min-width: $desktop-lg-width) {
+  .other {
+    padding-left: $padding-desktop;
+    padding-right: $padding-desktop;
+  }
+}

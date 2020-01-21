@@ -5,36 +5,107 @@
 
 .location__text {
   display: flex;
-  justify-content: space-around;
-  margin: 0 0 26px;
-  padding: 0 16px;
+  background-color: $light-grey;
+  margin: 0;
+  padding: 27px $padding-mobile 26px;
 }
 
 .location__collaboration {
-  width: 133px;
+  @include oswald;
+  @include style-reset;
+
+  width: 136px;
   font-size: 16px;
   line-height: 20px;
-  font-weight: 400;
   color: $black;
   text-transform: uppercase;
-  margin: 0 19px 0 0;
-  padding: 0;
+  margin-right: 6px;
 }
 
 .location__address {
+  @include style-reset;
+
   width: 141px;
-  @include arial;
   font-size: 14px;
   line-height: 20px;
   font-weight: 400;
   color: $light-black;
-  margin: 0;
-  padding: 0;
+}
+
+.location__address p {
+  @include style-reset;
 }
 
 .location__map {
   width: 100%;
-  min-height: 400px;
+  height: 366px;
   background-image: url("../../img/bg-map-mobile@1x.png");
   background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@media (min-width: $tablet-width) {
+  .location__text {
+    justify-content: space-between;
+    background-color: $white;
+    padding: 66px 71px 58px;
+  }
+
+  .location__collaboration {
+    width: 164px;
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .location__address {
+    width: 155px;
+    text-align: right;
+    font-size: 16px;
+    margin-top: -3px;
+  }
+
+  .location__address p {
+    margin-bottom: 20px;
+  }
+
+  .location__map {
+    height: 396px;
+    background-image: url("../../img/bg-map-tablet@1x.png");
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .location {
+    position: relative;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 95px 110px 103px;
+  }
+
+  .location__text {
+    position: relative;
+    width: 570px;
+    min-height: 201px;
+    background-color: $white;
+    padding: 66px 90px 59px 76px;
+    margin: 0;
+    flex-shrink: 0;
+    z-index: 1;
+  }
+
+  .location__address {
+    text-align: left;
+  }
+
+  .location__map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    background-image: url("../../img/bg-map-desktop@1x.png");
+    z-index: 0;
+  }
 }

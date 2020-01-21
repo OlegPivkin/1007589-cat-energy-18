@@ -1,0 +1,92 @@
+.cat-data {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-bottom: 1px $grey-lines solid;
+  margin: 0;
+  padding: 0 $padding-mobile 23px $padding-mobile;
+}
+
+.cat-data__input-area {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 0 0 14px;
+  padding: 0;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.cat-data__label {
+  @include oswald;
+
+  flex-shrink: 0;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $black-2;
+  margin: 0 15px 0 0;
+  padding: 0;
+}
+
+.cat-data__input {
+  @include oswald;
+
+  width: 100%;
+  height: 45px;
+  flex-grow: 0;
+  border: 1px $grey-lines solid;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $light-black;
+  margin: 0;
+  padding: 15px;
+
+  &:placeholder {
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: $light-black;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .cat-data {
+    border-bottom: none;
+    padding: 0 67px 72px 72px;
+  }
+
+  .cat-data__input-area {
+    margin-bottom: 20px;
+  }
+
+  .cat-data__label {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .cat-data__input {
+    height: 52px;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 17px $padding-mobile 17px;
+
+    &:placeholder {
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .cat-data {
+    width: 570px;
+    padding: 0;
+  }
+}

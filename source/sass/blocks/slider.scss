@@ -1,19 +1,260 @@
 .slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
 
+.slider__img-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  min-height: 210px;
+  margin: 0 0 33px;
+  padding: 0;
 }
 
 .slider__img {
+  @include style-reset;
 
+  width: 320px;
+  height: 240px;
+
+  &--after {
+    display: none;
+  }
 }
 
-.slider__toggle-area{
+.slider__img img {
+  width: 320px;
+  height: 240px;
+}
 
+.slider__toggle-area {
+  display: flex;
+  width: 320px;
+  margin: 0 auto;
+  padding: 0 57px;
 }
 
 .slider__text {
+  @include oswald;
 
+  border: none;
+  background-color: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $black;
+  cursor: pointer;
+  outline: none;
+  transition: border $transition;
+  margin: 0 10px 0 0;
+  padding: 0 6px;
+
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.slider__toggle-container {
+  display: block;
+  align-content: center;
+  width: 84px;
+  height: 14px;
+  border: 1px $grey-border-index solid;
+  border-radius: 6px;
+  background-color: $white;
+  cursor: pointer;
+  margin: 2px 12px 0 0;
+  padding: 3px 6px;
 }
 
 .slider__toggle {
+  @include style-reset;
 
+  display: block;
+  width: 50%;
+  min-height: 6px;
+  border: none;
+  border-radius: 3px;
+  background-color: $leaf;
+  cursor: pointer;
+  outline: none;
+  transition: box-shadow $transition, border $transition;
+}
+
+@media (min-width: $tablet-width) {
+  .slider {
+    position: relative;
+    padding-bottom: 73px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 462px;
+      background-color: $light-grey;
+      left: 0;
+      bottom: 0;
+      z-index: -1;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      z-index: -1;
+      width: 50%;
+      height: 462px;
+      background-color: #eaeaea;
+      right: 0;
+      bottom: 0;
+    }
+  }
+
+  .slider__img-container {
+    display: block;
+    position: relative;
+    width: 690px;
+    height: 517px;
+    margin-bottom: 20px;
+  }
+
+  .slider__img {
+    @include style-reset;
+
+    height: 517px;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+
+    &--before {
+      width: 50%;
+      left: 0;
+      z-index: 1;
+    }
+
+    &--after {
+      width: 52%;
+      right: -14px;
+      display: block;
+      z-index: 0;
+    }
+  }
+
+  .slider__img img {
+    width: 708px;
+    height: 517px;
+    position: absolute;
+    top: 0;
+    max-width: none;
+  }
+
+  .slider__img--after img {
+    right: 0;
+  }
+
+  .slider__toggle-area {
+    width: $tablet-width;
+    padding: 0 98px;
+  }
+
+  .slider__text {
+    font-size: 20px;
+    border-bottom: 1px #bebebe dotted;
+    margin-right: 21px;
+    padding: 0 0 6px;
+  }
+
+  .slider__toggle-container {
+    width: 428px;
+    height: 6px;
+    border: none;
+    border-radius: 2.5px;
+    background-color: #dcdcdc;
+    margin-top: 7px;
+    margin-right: 21px;
+    padding-left: 198px;
+    padding-right: 196px;
+  }
+
+  .slider__toggle {
+    position: relative;
+    width: 34px;
+    height: 34px;
+    border: 1px $grey-toggles solid;
+    border-radius: 50%;
+    background-color: $white;
+    transform: translateY(-50%);
+
+    &::before {
+      position: absolute;
+      display: block;
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: $leaf;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .slider {
+    @include style-reset;
+
+    padding-top: 63px;
+    padding-bottom: 73px;
+    z-index: 0;
+  }
+
+  .slider__img-container {
+    margin-bottom: 41px;
+  }
+
+  .slider__before-container {
+    left: 128px;
+  }
+
+  .slider__after-container {
+    left: 474px;
+  }
+
+  .slider__img--before {
+    width: 53.7%;
+    left: -26px;
+  }
+
+  .slider__img--after {
+    width: 48.3%;
+    right: 12px;
+  }
+
+  .slider__text {
+    &:hover,
+    &:focus {
+      border-bottom: 1px #989898 solid;
+    }
+
+    &:active {
+      border-color: transparent;
+    }
+  }
+
+  .slider__toggle {
+    &:hover,
+    &:focus {
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.25);
+    }
+
+    &:active {
+      border: 2px $leaf solid;
+    }
+  }
 }

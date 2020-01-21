@@ -1,0 +1,70 @@
+.form-container {
+  @include style-reset;
+
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form-container__title {
+  @include oswald;
+
+  width: 100%;
+  font-size: 36px;
+  line-height: 60px;
+  font-weight: 400;
+  color: $black;
+  margin: 0 0 35px;
+  padding: 30px 21px 0 $padding-mobile;
+}
+
+.form-container__text {
+  @include oswald;
+
+  width: 240px;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $black;
+  margin: 0 0 39px $padding-mobile;
+  padding: 0;
+}
+
+.form-container__form {
+  @include style-reset;
+
+  width: 100%;
+}
+
+@media (min-width: $tablet-width) {
+  .form-container__title {
+    font-size: 60px;
+    margin: 0 0 53px;
+    padding: 63px 31px 0 $padding-tablet;
+  }
+
+  .form-container__text {
+    width: 342px;
+    font-size: 20px;
+    line-height: 30px;
+    margin: 0 0 69px 70px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form-container__title {
+    padding-top: 81px;
+  }
+}
+
+@media (min-width: $desktop-lg-width) {
+  .form-container__title {
+    padding-left: 113px;
+    padding-right: $padding-desktop;
+  }
+
+  .form-container__text {
+    margin-left: $padding-desktop;
+  }
+}
