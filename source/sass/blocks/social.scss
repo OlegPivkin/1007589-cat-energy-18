@@ -1,8 +1,7 @@
 .social {
-  @include default-list;
-
   display: flex;
   flex-wrap: wrap;
+  list-style: none;
 }
 
 .social__item {
