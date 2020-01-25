@@ -51,6 +51,8 @@
   font-weight: 400;
   text-transform: uppercase;
   color: $black-2;
+  cursor: pointer;
+  transition: opacity $transition;
   margin: 0;
   padding: 0 0 0 46px;
 
@@ -64,6 +66,7 @@
     top: 50%;
     left: 0;
     transform: translateY(-50%);
+    transition: border $transition;
   }
 }
 
@@ -122,6 +125,23 @@
 
     &:last-of-type {
       margin-bottom: 0;
+    }
+  }
+
+  .other__input:focus + .other__label::before {
+    border-color: #bababa;
+  }
+
+  .other__label {
+    &:hover,
+    &:focus {
+      &::before {
+        border-color: #bababa;
+      }
+    }
+
+    &:active {
+      opacity: 0.3;
     }
   }
 }
