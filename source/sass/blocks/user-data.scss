@@ -82,31 +82,28 @@
   }
 }
 
-.user-data__input:focus + .user-data__img path {
-  transition: fill $transition;
+.user-data__input:focus + svg {
   fill: $leaf;
 }
 
-.user-data__img {
+.user-data__input + svg {
   position: absolute;
+  transition: fill $transition;
   top: 50%;
   transform: translateY(-50%);
+  fill: $black-2;
+}
 
-  &--email {
-    width: 18px;
-    height: 14px;
-    right: 15px;
-  }
+.user-data__input[id="email"] + svg {
+  width: 18px;
+  height: 14px;
+  right: 15px;
+}
 
-  &--tel {
-    width: 21px;
-    height: 21px;
-    right: 13px;
-  }
-
-  & path {
-    fill: $black-2;
-  }
+.user-data__input[id="tel"] + svg {
+  width: 21px;
+  height: 21px;
+  right: 13px;
 }
 
 @media (min-width: $tablet-width) {

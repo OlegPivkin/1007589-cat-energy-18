@@ -33,6 +33,10 @@
   padding: 0;
 }
 
+.product-card__link h2 {
+  font: inherit;
+}
+
 .product-card__table {
   width: 100%;
   border-collapse: collapse;

@@ -5,7 +5,11 @@
   <title>HTML Academy: Cat Energy. Каталог.</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/style.min.css">
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=fa1e717c-bdf5-470a-83bf-caf974bf705d&lang=ru_RU" type="text/javascript">
+  <link rel="preload" href="fonts/oswaldmedium.woff" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/oswaldregular.woff" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=fa1e717c-bdf5-470a-83bf-caf974bf705d&lang=ru_RU">
   </script>
 </head>
 <body>
@@ -50,7 +54,9 @@
               </picture>
             </a>
             <div class="product-card__description">
-              <a class="product-card__link" href="#nowhere">Cat Energy PRO 500 г</a>
+              <a class="product-card__link" href="#nowhere">
+                <h2>Cat Energy PRO 500 г</h2>
+              </a>
               <table class="product-card__table">
                 <tr class="product-card__line">
                   <td class="product-card__indicator">Объем</td>
@@ -82,7 +88,9 @@
               </picture>
             </a>
             <div class="product-card__description">
-              <a class="product-card__link" href="#nowhere">Cat Energy PRO 1000 г</a>
+              <a class="product-card__link" href="#nowhere">
+                <h2>Cat Energy PRO 1000 г</h2>
+              </a>
               <table class="product-card__table">
                 <tr class="product-card__line">
                   <td class="product-card__indicator">Объем</td>
@@ -114,7 +122,9 @@
               </picture>
             </a>
             <div class="product-card__description">
-              <a class="product-card__link" href="#nowhere">Cat Energy PRO 500 г</a>
+              <a class="product-card__link" href="#nowhere">
+                <h2>Cat Energy PRO 500 г</h2>
+              </a>
               <table class="product-card__table">
                 <tr class="product-card__line">
                   <td class="product-card__indicator">Объем</td>
@@ -146,7 +156,9 @@
               </picture>
             </a>
             <div class="product-card__description">
-              <a class="product-card__link" href="#nowhere">Cat Energy PRO 1000 г</a>
+              <a class="product-card__link" href="#nowhere">
+                <h2>Cat Energy PRO 1000 г</h2>
+              </a>
               <table class="product-card__table">
                 <tr class="product-card__line">
                   <td class="product-card__indicator">Объем</td>
@@ -178,7 +190,9 @@
               </picture>
             </a>
             <div class="product-card__description">
-              <a class="product-card__link" href="#nowhere">Cat Energy PRO 500 г</a>
+              <a class="product-card__link" href="#nowhere">
+                <h2>Cat Energy PRO 500 г</h2>
+              </a>
               <table class="product-card__table">
                 <tr class="product-card__line">
                   <td class="product-card__indicator">Объем</td>
@@ -210,7 +224,9 @@
               </picture>
             </a>
             <div class="product-card__description">
-              <a class="product-card__link" href="#nowhere">Cat Energy PRO 1000 г</a>
+              <a class="product-card__link" href="#nowhere">
+                <h2>Cat Energy PRO 1000 г</h2>
+              </a>
               <table class="product-card__table">
                 <tr class="product-card__line">
                   <td class="product-card__indicator">Объем</td>
@@ -242,7 +258,9 @@
               </picture>
             </a>
             <div class="product-card__description">
-              <a class="product-card__link" href="#nowhere">Cat Energy PRO 500 г</a>
+              <a class="product-card__link" href="#nowhere">
+                <h2>Cat Energy PRO 500 г</h2>
+              </a>
               <table class="product-card__table">
                 <tr class="product-card__line">
                   <td class="product-card__indicator">Объем</td>
@@ -262,11 +280,11 @@
           </article>
         </li>
         <li class="basic-products__item">
-          <article class="basic-products__last-card last-card">
+          <div class="basic-products__last-card last-card">
             <p class="last-card__title">Показать еще 100500 товаров</p>
             <p class="last-card__text">На самом деле вкусов гораздо больше!</p>
             <a class="last-card__button button button--grey" href="#nowhere">Показать все</a>
-          </article>
+          </div>
         </li>
       </ul>
     </section>
@@ -299,7 +317,7 @@
             <a class="add-product-card__button button" href="#nowhere">Заказать</a>
           </li>
         </ul>
-        <a class="additional-product__share" href="#nowhere">
+        <a class="additional-products__share" href="#nowhere">
           <p>Закажите все<br>и получите чехол для<br>кота в подарок!</p>
         </a>
       </div>

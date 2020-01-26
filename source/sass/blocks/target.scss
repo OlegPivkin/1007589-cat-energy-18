@@ -76,12 +76,10 @@
     margin-bottom: 33px;
   }
 
-  .target__input {
-    &:checked + .target__label::after {
-      width: 18px;
-      height: 18px;
-      left: 11px;
-    }
+  .target__input:checked + .target__label::after {
+    width: 18px;
+    height: 18px;
+    left: 11px;
   }
 
   .target__label {
@@ -103,19 +101,14 @@
   }
 
   .target__input:focus + .target__label::before {
-    border-color: #bcbcbc;
+    border-color: $grey-toggles-focus;
   }
 
-  .target__label {
-    &:hover,
-    &:focus {
-      &::before {
-        border-color: #bcbcbc;
-      }
-    }
+  .target__label:hover::before {
+    border-color: $grey-toggles-focus;
+  }
 
-    &:active {
-      opacity: 0.3;
-    }
+  .target__label:active {
+    opacity: 0.3;
   }
 }

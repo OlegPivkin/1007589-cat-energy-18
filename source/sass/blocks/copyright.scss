@@ -22,7 +22,8 @@
 .copyright__text {
   @include style-reset;
 
-  width: 114px;
+  width: auto;
+  flex-grow: 1;
   font-size: 16px;
   line-height: 16px;
   font-weight: 400;
@@ -35,9 +36,7 @@
     fill: $leaf;
   }
 
-  .copyright__link {
-    &:active {
-      opacity: 0.3;
-    }
+  .copyright__link:active {
+    opacity: 0.3;
   }
 }

@@ -34,13 +34,13 @@
   }
 }
 
-.additional-product__share {
+.additional-products__share {
   @include style-reset;
 
   width: 100%;
 }
 
-.additional-product__share p {
+.additional-products__share p {
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../../img/gift-photo-mobile@2x.jpg");
   }
@@ -48,11 +48,11 @@
   position: relative;
   width: 100%;
   min-height: 289px;
-  background-color: $leaf;
   background-image: url("../../img/gift-photo-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background-color: #70b447;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
@@ -95,7 +95,11 @@
     padding: 38px 37px 28px 38px;
   }
 
-  .additional-product__share p {
+  .additional-products__share p {
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../../img/gift-photo-tablet@2x.jpg");
+    }
+
     min-height: 200px;
     background-image: url("../../img/gift-photo-tablet@1x.jpg");
     text-align: left;
@@ -132,13 +136,17 @@
     padding: 15px 0 16px 0;
   }
 
-  .additional-product__share {
+  .additional-products__share {
     width: 245px;
     min-height: 289px;
     margin-right: auto;
   }
 
-  .additional-product__share p {
+  .additional-products__share p {
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../../img/gift-photo-desktop@2x.jpg");
+    }
+
     width: 100%;
     background-image: url("../../img/gift-photo-desktop@1x.jpg");
     text-align: center;

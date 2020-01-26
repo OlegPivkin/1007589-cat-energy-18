@@ -99,7 +99,7 @@
 
     width: auto;
     border-top: none;
-    margin-right: 24px;
+    margin-right: 35px;
     margin-bottom: 15px;
 
     &:last-child {
@@ -136,22 +136,20 @@
   }
 
   .main-nav__item {
-    margin-right: 22px;
+    margin-right: 34px;
   }
 
   .main-nav__link {
     font-size: 20px;
   }
 
-  .main-nav__link[href] {
-    &:hover,
-    &:focus {
-      opacity: 0.6;
-    }
+  .main-nav__link[href]:hover,
+  .main-nav__link[href]:focus {
+    opacity: 0.6;
+  }
 
-    &:active {
-      opacity: 0.3;
-    }
+  .main-nav__link[href]:active {
+    opacity: 0.3;
   }
 
   .main-nav--index .main-nav__link {

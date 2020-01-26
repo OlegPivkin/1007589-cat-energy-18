@@ -248,16 +248,14 @@
     padding-right: 0;
   }
 
-  .goals__link {
-    &:hover::after,
-    &:focus::after {
-      background-image: url("../../img/icon-right-arrow-verylong.svg");
-      width: 34px;
-    }
+  .goals__link:hover::after,
+  .goals__link:focus::after {
+    background-image: url("../../img/icon-right-arrow-verylong.svg");
+    width: 34px;
+  }
 
-    &:active {
-      opacity: 0.5;
-    }
+  .goals__link:active {
+    opacity: 0.5;
   }
 }
 
