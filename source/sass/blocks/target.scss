@@ -45,6 +45,8 @@
   font-weight: 400;
   text-transform: uppercase;
   color: $black-2;
+  cursor: pointer;
+  transition: opacity $transition;
   margin: 0;
   padding: 0 0 0 46px;
 
@@ -59,12 +61,12 @@
     top: 50%;
     left: 0;
     transform: translateY(-50%);
+    transition: border $transition;
   }
 }
 
 @media (min-width: $tablet-width) {
   .target {
-    //width: auto;
     border: 1px $grey-lines solid;
     margin: 0 67px 97px 71px;
     padding: 25px 28px;
@@ -98,5 +100,22 @@
   .target {
     width: 570px;
     margin: 0;
+  }
+
+  .target__input:focus + .target__label::before {
+    border-color: #bcbcbc;
+  }
+
+  .target__label {
+    &:hover,
+    &:focus {
+      &::before {
+        border-color: #bcbcbc;
+      }
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
