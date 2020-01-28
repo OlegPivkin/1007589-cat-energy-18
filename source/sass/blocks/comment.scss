@@ -8,8 +8,8 @@
 }
 
 .comment__title {
-  width: 172px;
-  margin-bottom: 31px;
+  width: 163px;
+  margin-bottom: 35px;
 }
 
 .comment__textarea {
@@ -26,7 +26,7 @@
   outline: none;
   transition: border $transition, box-shadow $transition;
   margin: 0;
-  padding: 15px;
+  padding: 12px 14px 12px 13px;
 
   &:placeholder {
     font-size: 16px;
@@ -54,15 +54,15 @@
   }
 
   .comment__title {
-    width: 273px;
-    margin-bottom: 64px;
+    width: 260px;
+    margin-bottom: 76px;
   }
 
   .comment__textarea {
     height: 174px;
     font-size: 20px;
     line-height: 30px;
-    padding: 17px 20px;
+    padding: 9px 18px;
 
     &:placeholder {
       font-size: 20px;
@@ -71,13 +71,9 @@
   }
 }
 
-@media (min-width: $tablet-width) {
+@media (min-width: $desktop-width) {
   .comment {
     margin-bottom: 89px;
-  }
-
-  .comment__title {
-    margin-bottom: 71px;
   }
 }
 
