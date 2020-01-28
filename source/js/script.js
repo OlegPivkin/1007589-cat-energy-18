@@ -27,7 +27,7 @@
             myPlacemark = new ymaps.Placemark([59.938631, 30.323055], {}, {
                 iconLayout: 'default#image',
                 iconImageHref: '../img/map-pin-mobile.png',
-                iconImageSize: [55, 53],
+                iconImageSize: [55, 54],
                 iconImageOffset: [-27, -50]
             });
         myMap.geoObjects.add(myPlacemark);
