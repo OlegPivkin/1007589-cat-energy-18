@@ -12,7 +12,7 @@
   line-height: 16px;
   color: $black-2;
   text-transform: uppercase;
-  margin: 0 0 10px;
+  margin: 0 0 12px;
   padding: 0;
 }
 
@@ -22,7 +22,7 @@
   line-height: 14px;
   font-weight: 400;
   color: $light-black;
-  margin: 0 0 13px;
+  margin: 0 0 15px;
   padding: 0;
 }
 
@@ -33,7 +33,7 @@
   font-weight: 400;
   color: $light-black;
   text-align: right;
-  margin: 0 0 13px;
+  margin: 0 0 15px;
   padding: 0;
 }
 
@@ -45,7 +45,7 @@
   .add-product-card__title {
     width: 50%;
     font-size: 20px;
-    margin-bottom: 27px;
+    margin-bottom: 28px;
   }
 
   .add-product-card__indicator {
@@ -53,7 +53,7 @@
     font-size: 16px;
     line-height: 20px;
     text-align: right;
-    margin-bottom: 22px;
+    margin-bottom: 20px;
   }
 
   .add-product-card__value {
@@ -61,7 +61,7 @@
     font-size: 16px;
     line-height: 20px;
     text-align: right;
-    margin-bottom: 22px;
+    margin-bottom: 20px;
   }
 }
 
@@ -81,16 +81,14 @@
     width: 245px;
     text-align: left;
     margin-bottom: 0;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 7px;
   }
 
   .add-product-card__value {
     width: 80px;
     text-align: left;
     margin-bottom: 0;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 7px;
   }
 
   .add-product-card__button {

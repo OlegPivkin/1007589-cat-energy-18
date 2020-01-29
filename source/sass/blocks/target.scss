@@ -4,14 +4,14 @@
   width: auto;
   border-bottom: 1px $grey-lines solid;
   margin: 0 0 42px;
-  padding: 29px $padding-mobile 26px $padding-mobile;
+  padding: 26px $padding-mobile;
 }
 
 .target__input-area {
   display: flex;
   align-items: center;
   width: auto;
-  margin: 0 0 27px;
+  margin: 0 0 25px;
   padding: 0;
 
   &:last-of-type {
@@ -69,7 +69,7 @@
   .target {
     border: 1px $grey-lines solid;
     margin: 0 67px 97px 71px;
-    padding: 25px 28px;
+    padding: 33px 27px 35px;
   }
 
   .target__input-area {
@@ -87,7 +87,7 @@
   .target__label {
     font-size: 20px;
     line-height: 20px;
-    padding-left: 60px;
+    padding-left: 59px;
 
     &::before {
       width: 40px;

@@ -1,10 +1,10 @@
 @mixin oswald {
   font-family: "Oswald", "Arial", sans-serif;
-  font-weight: normal;
+  font-weight: 400;
 }
 
 @mixin arial {
-  font-family: "Arial", sans-serif;
+  font-family: "Arial", "Tahoma", sans-serif;
 }
 
 @mixin style-reset {

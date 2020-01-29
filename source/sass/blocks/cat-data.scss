@@ -4,12 +4,12 @@
   width: 100%;
   border-bottom: 1px $grey-lines solid;
   margin: 0;
-  padding: 0 $padding-mobile 23px $padding-mobile;
+  padding: 0 $padding-mobile 23px 19px;
 }
 
 .cat-data__input-area {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
   margin: 0 0 14px;
   padding: 0;
@@ -17,6 +17,14 @@
   &:last-of-type {
     margin-bottom: 0;
   }
+}
+
+.cat-data__input-area--weight .cat-data__label {
+  margin-right: 17px;
+}
+
+.cat-data__input-area--age .cat-data__label {
+  margin-right: 16px;
 }
 
 .cat-data__label {
@@ -28,8 +36,8 @@
   font-weight: 400;
   text-transform: uppercase;
   color: $black-2;
-  margin: 0 15px 0 0;
-  padding: 0;
+  margin: 0 14px 0 0;
+  padding: 13px 0 0;
 }
 
 .cat-data__input {
@@ -95,13 +103,20 @@
   .cat-data__label {
     font-size: 20px;
     line-height: 20px;
+
+    margin-right: 15px;
+    padding-top: 15px;
+  }
+
+  .cat-data__input-area--weight .cat-data__label {
+    margin-right: 19px;
   }
 
   .cat-data__input {
     height: 52px;
     font-size: 20px;
     line-height: 20px;
-    padding: 17px $padding-mobile 17px;
+    padding: 13px 18px 16px;
 
     &:placeholder {
       font-size: 20px;

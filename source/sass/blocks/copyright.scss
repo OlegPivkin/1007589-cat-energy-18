@@ -5,12 +5,14 @@
   outline: none;
   cursor: pointer;
   transition: opacity $transition;
-  margin-left: -1px;
+  margin-left: -2px;
+  margin-top: -2px;
 }
 
 .copyright__link svg {
   width: 41px;
   height: 41px;
+  margin-top: 2px;
   margin-right: -7px;
 }
 
@@ -22,7 +24,7 @@
 .copyright__text {
   @include style-reset;
 
-  width: 114px;
+  width: auto;
   font-size: 16px;
   line-height: 16px;
   font-weight: 400;

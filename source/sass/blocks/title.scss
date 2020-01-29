@@ -6,19 +6,19 @@
   font-weight: 400;
   color: $black;
   background-color: $white;
-  margin-top: -16px;
-  margin-left: -20px;
+  margin-top: -17px;
+  margin-left: -21px;
   padding-left: $padding-mobile;
-  padding-right: 25px;
+  padding-right: 21px;
 }
 
 @media (min-width: $tablet-width) {
   .title {
     font-size: 36px;
     line-height: 36px;
-    margin-top: -23px;
+    margin-top: -25px;
     margin-left: -41px;
-    padding-left: 41px;
+    padding-left: 39px;
     padding-right: 41px;
   }
 }

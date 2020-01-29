@@ -56,7 +56,7 @@
   text-transform: uppercase;
   color: $white;
   text-align: center;
-  margin-bottom: 28px;
+  margin-bottom: 27px;
 }
 
 .program__button {
@@ -96,6 +96,7 @@
     color: #111111;
     text-align: left;
     margin-bottom: 48px;
+    padding-left: 2px;
   }
 
   .program img {
@@ -119,8 +120,8 @@
 @media (min-width: $desktop-width) {
   .program {
     position: static;
-    margin-bottom: 80px;
-    padding-top: 107px;
+    margin-bottom: 79px;
+    padding-top: 109px;
     padding-bottom: 450px;
 
     &::before {
@@ -129,7 +130,7 @@
       }
 
       display: block;
-      width: 50%;
+      width: 50.1%;
       height: 696px;
       top: 0;
       left: auto;
@@ -142,16 +143,17 @@
     position: relative;
     width: 78%;
     align-items: flex-start;
-    padding-left: 79px;
+    padding-left: 80px;
     padding-bottom: 188px;
   }
 
   .program__title {
-    margin-bottom: 42px;
+    margin-bottom: 41px;
   }
 
   .program__text {
     margin-bottom: 53px;
+    padding-left: 0;
   }
 
   .program img {
@@ -162,7 +164,7 @@
   }
 
   .program__button {
-    margin-left: 1px;
+    margin-left: 0;
   }
 }
 

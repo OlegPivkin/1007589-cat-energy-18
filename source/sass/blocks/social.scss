@@ -2,6 +2,8 @@
   display: flex;
   flex-wrap: wrap;
   list-style: none;
+  justify-content: center;
+  padding: 22px 8px 17px 0;
 }
 
 .social__item {
@@ -37,6 +39,10 @@
 }
 
 @media (min-width: $tablet-width) {
+  .social {
+    padding: 8px 0 0 16px;
+  }
+
   .social__item {
     margin-right: 27px;
 
@@ -46,6 +52,7 @@
 
     &--insta {
       padding-top: 3px;
+      padding-left: 1px;
     }
   }
 

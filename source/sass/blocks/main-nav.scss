@@ -99,7 +99,7 @@
 
     width: auto;
     border-top: none;
-    margin-right: 24px;
+    margin-right: 35px;
     margin-bottom: 15px;
 
     &:last-child {
@@ -131,16 +131,20 @@
 
 @media (min-width: $desktop-width) {
   .main-nav {
-    width: 479px;
+    width: 482px;
     padding-top: 21px;
   }
 
   .main-nav__item {
-    margin-right: 22px;
+    margin-right: 35px;
   }
 
   .main-nav__link {
     font-size: 20px;
+
+    &::after {
+      bottom: -10px;
+    }
   }
 
   .main-nav__link[href] {

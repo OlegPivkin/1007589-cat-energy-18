@@ -184,12 +184,13 @@
     justify-content: flex-end;
     width: 184px;
     padding-top: 11px;
+    padding-right: 1px;
   }
 
   .example__cost {
     font-size: 20px;
     margin-right: 0;
-    margin-bottom: 10px;
+    margin-bottom: 9px;
   }
 
   .example__cost-number {
@@ -262,7 +263,8 @@
   }
 
   .example__slider {
-    width: 790px;
+    width: 651px;
+    margin-left: auto;
   }
 }
 

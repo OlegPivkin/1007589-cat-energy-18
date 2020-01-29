@@ -27,6 +27,7 @@ input[type="radio"].visually-hidden {
 
 body {
   @include arial;
+
   font-size: 14px;
   line-height: 18px;
   color: $light-black;
